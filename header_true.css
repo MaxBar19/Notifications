@@ -1,0 +1,62 @@
+#main {
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
+.header{
+  height: 58px;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.header .logo_select_head-menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.header .notification_account{
+  display: flex;
+  flex-direction: row;
+}
+
+.header .logo{
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 200px;
+}
+
+.header .custom-select-container{
+  display: flex;
+  align-items: center;
+}
+.header .custom-select-container select{
+  border-radius: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.head-menu{
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.head-menu .menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.head-menu .menu li a{
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #697389;
+}

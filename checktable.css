@@ -1,0 +1,9 @@
+.checkbox{
+  width: 100%;
+  height: 100%;
+}
+.checked{
+  background: transparent url(shape_check.png) no-repeat 80% 50%;
+
+  background-color: #129900;
+}

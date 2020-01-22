@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="togglebutton.css">
+  <link rel="stylesheet" href="notifications_database.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+  
+  <div class="notification-table">
+    <div class="row" id="header-row">
+      <div class="col-sm"><div style="
+        font-weight: 550;
+        color: #4f74b0;"><p style="width: 60%;">Отримувати системні сповіщення у випадку:</p></div></div>
+      <div class="col-sm" style="vertical-align: top;">Параметри</div>
+      <div class="col-sm"><p style="width: 50%;">Мобільний додаток</p></div>
+      <div class="col-sm-1" style="vertical-align: top;">Email</div>
+      <div class="col-sm-1" style="vertical-align: top;">SMS</div>
+      <div class="col-sm-1" style="vertical-align: top;">Viber</div>
+      <div class="col-sm-1" style="vertical-align: top;">Telegram</div>
+      <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row" id="overload-row">
+      <div class="col-sm"><p>перезавантаження системи</p></div>
+      <div class="col-sm" id="settings_overload"><img src="gear.svg"></div>
+      <div class="col-sm-1" style="text-align: center;"><div class="mobile">1</div></div> 
+      <div class="col-sm-1"><div class="email">1</div></div>
+      <div class="col-sm-1"><div class="sms">1</div></div>
+      <div class="col-sm-1"><div class="viber">1</div></div>
+      <div class="col-sm-1"><div class="telegram">1</div></div>
+      <div class="col-sm-1">
+        <div class="switch">
+          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+          <label for="cmn-toggle-1"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="outtrack_way-row">
+      <div class="col-sm"><p>відхилення від графіка виїзду на маршрут</p></div>
+      <div class="col-sm" id="settings_outtrack_way"><img src="gear.svg"></div>
+      <div class="col-sm-1"><div class="mobile"></div></div>
+      <div class="col-sm-1"><div class="email"></div></div>
+      <div class="col-sm-1"><div class="sms"></div></div>
+      <div class="col-sm-1"><div class="viber"></div></div>
+      <div class="col-sm-1"><div class="telegram"></div></div>
+      <div class="col-sm-1">
+        <div class="switch">
+          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+          <label for="cmn-toggle-1"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="outtrack_stop-row">
+      <div class="col-sm"><p>відхилення від графіка руху по зупинкам</p></div>
+      <div class="col-sm" id="settings_outtrack_stop"><img src="gear.svg"></div>
+      <div class="col-sm-1"><div class="mobile"></div></div>
+      <div class="col-sm-1"><div class="email"></div></div>
+      <div class="col-sm-1"><div class="sms"></div></div>
+      <div class="col-sm-1"><div class="viber"></div></div>
+      <div class="col-sm-1"><div class="telegram"></div></div>
+      <div class="col-sm-1">
+        <div class="switch">
+          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+          <label for="cmn-toggle-1"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="news">
+      <div class="col-sm"><p style="font-weight: bold; color: #4f74b0;">Отримувати новини</p></div>
+
+      <div class="col-sm-1"><div class="mobile"></div></div class="col-sm">
+      <div class="col-sm-1"><div class="email"></div></div>
+      <div class="col-sm-1"><div class="sms"></div></div>
+      <div class="col-sm-1"><div class="viber"></div></div>
+      <div class="col-sm-1"><div class="telegram"></div></div>
+      <div class="col-sm-1">
+        <div class="switch">
+          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+          <label for="cmn-toggle-1"></label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

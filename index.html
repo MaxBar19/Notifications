@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <link rel="stylesheet" href="checktable.css">
+  <link rel="stylesheet" href="header_true.css">  
+  <link rel="stylesheet" href="notification_icon.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="notifications_database.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="togglebutton.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="main.js"></script>
+</head>
+<body>
+    
+  <div class="wrapper">
+    <div class="content">
+    <!--Header-->
+    <div class="header">
+      <div class="logo_select_head-menu">
+        <div class="logo">
+          <a href="/"><img src="./images/intranso/logo.svg"></a>
+        </div>
+
+      <div class="custom-select-container customSelect">
+        <span class="custom-select-opener" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="customSelect-XBC7q-panel" tabindex="0" aria-activedescendant="customSelect-XBC7q-selectedOption" data-value="ru">
+        </span>
+        <select name="language" id="language" tabindex="-1">
+          <option value="uk" class="test"><img src="">Українська</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <div class="head-menu">
+        <ul class="menu">
+            <li><a href="/transport" title="Транспорт" class="transport">Транспорт</a></li>
+            <li><a href="/gpsTracksAllTransports" title="Карта" class="map">Карта</a></li>
+            <li><a href="/reports" title="Отчёты" class="reports">Отчёты</a></li>
+            <li><a href="/settings" title="Настройки" class="notifications">Настройки</a></li>
+            <li><a href="/users/carrier" title="Права пользователей" class="users">Права пользователей</a></li>     
+        </ul>
+      </div>
+      </div>
+
+      <div class="notification_account">   
+        <div class="news-info">
+        <a href="/notifications/list">
+          <div class="news-icon">
+            <img src="images\notifications.svg" alt="">
+            <span class="badge">3</span>
+          </div>
+          </a>
+        </div>
+
+        <div class="profile-info">
+          <div class="profile-icon">
+              <div class="profile-notification">
+                  <img src="images\login\gemicleLogo.png.good" alt="">
+                  <i class="icon-star" style="margin: 0 auto;"></i>
+              </div>
+          </div>
+          
+          <div class="profile-name" style="float: right;padding-right: 0px; ">
+            <span class="triangle"></span>
+          </div>
+          <div class="profile-name">
+          <div class="premium-wrap">inna<span class="long_name">Премиум аккаунт</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="sidebar_container">
+        <div id="sidebar">
+          <div class="filter_header">
+            <p>Нотифікації</p>
+            <button>X</button>
+          </div>
+          <div class="filter-content">
+            <p>This is content</p>
+          </div>
+        </div>
+       <!-- <div class="opener"><span class="openbtn">STATIONS</span></div> -->
+      </div>
+
+      <div class="notifications_database text-decoretion-none">
+        <p class="notification_head">НОТИФІКАЦІЇ</p>
+
+        <div class="notification-table">
+          <div class="row" id="header-row">
+            <div class="col-sm-3"><div style="
+              font-weight: 550;
+              color: #4f74b0;"><p style="width: 70%;">Отримувати системні сповіщення у випадку:</p></div></div>
+            <div class="col-sm" style="vertical-align: top;">Параметри</div>
+            <div class="col-sm"><p style="width: 50%; padding-left: 10px;">Мобільний додаток</p></div>
+            <div class="col-sm" style="vertical-align: top;">Email</div>
+            <div class="col-sm" style="vertical-align: top;">SMS</div>
+            <div class="col-sm" style="vertical-align: top;">Viber</div>
+            <div class="col-sm" style="vertical-align: top;">Telegram</div>
+            <div class="col-sm"></div>
+          </div>
+      
+          <div class="row align-items-center" id="overload-row">
+            <div class="col-sm-3"><div><p>перезавантаження системи</p></div></div>
+            <div class="col-sm" id="settings_overload"><img src="gear.svg"></div>
+            <div class="col-sm" style="text-align: center;"><div class="mobile"><div class="checkbox"></div></div></div> 
+            <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="viber"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="telegram"><div class="checkbox"></div></div></div>
+            <div class="col-sm">
+              <div class="centered">
+                <div class="switch">
+                  <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                  <label for="cmn-toggle-1"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row align-items-center" id="outtrack_way-row">
+            <div class="col-sm-3"><div><p>відхилення від графіка виїзду на маршрут</p></div></div>
+            <div class="col-sm" id="settings_outtrack_way"><img src="gear.svg"></div>
+            <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="viber"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="telegram"><div class="checkbox"></div></div></div>
+            <div class="col-sm">
+              <div class="centered">
+                <div class="switch">
+                  <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                  <label for="cmn-toggle-2"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row align-items-center" id="outtrack_stop-row">
+            <div class="col-sm-3"><div><p>відхилення від графіка руху по зупинкам</p></div></div>
+            <div class="col-sm" id="settings_outtrack_stop"><img src="gear.svg"></div>
+            <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="viber"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="telegram"><div class="checkbox"></div></div></div>
+            <div class="col-sm">
+              <div class="centered">
+                <div class="switch">
+                  <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                  <label for="cmn-toggle-3"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row align-items-top" id="news">
+            <div class="col-sm-3"><p style="font-weight: bold; color: #4f74b0;">Отримувати новини</p></div>
+            <div class="col-sm"></div>
+            <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="viber"><div class="checkbox"></div></div></div>
+            <div class="col-sm"><div class="telegram"><div class="checkbox"></div></div></div>
+            <div class="col-sm">
+              <div class="centered">
+                <div class="switch">
+                  <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                  <label for="cmn-toggle-4"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    
+    <div class="Footer">
+      <div class="footer-tags">
+        <ul class="tags">
+            <li><a href="#" title="Транспорт" class="transport">Головна</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Транспорт</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Карта</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Звіти</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Відеонагляд</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Налаштування</a></li>     
+            <li><a href="#" title="Транспорт" class="transport">Права користувачів</a></li>     
+        </ul>
+      </div>
+    </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

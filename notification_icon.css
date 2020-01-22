@@ -1,0 +1,22 @@
+.news-info{
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.news-icon {
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.news-icon .badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  padding: 3px 6px;
+  border-radius: 90%;
+  background-color: red;
+  color: white;
+}

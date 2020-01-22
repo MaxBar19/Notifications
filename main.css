@@ -1,0 +1,7 @@
+#main, .header, .content, .wrapper, .footer{
+  font-family: Roboto;
+}
+
+body .wrapper, body .content{
+  background-color: #e8f1fa;;
+}
