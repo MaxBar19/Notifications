@@ -59,10 +59,13 @@ function redraw() {
 
     $('<div/>').append(
       `<div class="notificationValue">  
-          <div><div><img src="front-bus-copy.png"></div><div>${item.transport}</div></div>
-          <div><div><img src="group-13.png"></div><div>${item.repeat}</div><div>повторювань</div></div>
-          <div><img src="clock-circular-outline-3.png">протягом ${item.duration}</div>
-          <div class="removeData" data-index=${i}><img src="shape-copy.png"></div>
+          <div class="inline"><img src="front-bus-copy.png"><span>${item.transport}</span></div>
+
+          <div class="inline"><img src="group-13.png"><span>${item.repeat}</span><span>повторювань</span></div>
+          
+          <div class="inline"><img src="clock-circular-outline-3.png"><span>протягом</span><span>${item.duration}</span></div>
+          
+          <div class="removeData inline" data-index=${i}><img style="float:right;" src="shape-copy.png"></div>
         </div>`).appendTo(list);
   });
 }

@@ -30,9 +30,16 @@
 #my-modal .transportData .notificationValue{
   margin-top: 40px;
   padding-top: 10px;
-  height: 40px;
+  font-size: 14px;
+  background-color: #f6f7fb;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #f6f7fb;
 }
+
+
+#my-modal .transportData .notificationValue .inline span, #my-modal .transportData .notificationValue .inline img{
+
+  padding: 5px;
+}
+
