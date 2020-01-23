@@ -43,9 +43,6 @@ const providers = [
         duration: $('.duration').val()
       })
     },
-    onRemove(i){
-      this.items.splice(i, 1);
-    }
   },
 
 
@@ -60,7 +57,13 @@ function redraw() {
 
   $.each(providers[id].getItems(), function (i, item) {
 
-    $('<div/>').append('<div class="notificationValue"><div>' + item.transport + '</div><div>' + item.repeat + '</div><div>' + item.duration + '</div><button class="removeData" data-index='+i+'>X</button></div>').appendTo(list);
+    $('<div/>').append(
+      `<div class="notificationValue">  
+          <div><div><img src="front-bus-copy.png"></div><div>${item.transport}</div></div>
+          <div><div><img src="group-13.png"></div><div>${item.repeat}</div><div>повторювань</div></div>
+          <div><img src="clock-circular-outline-3.png">протягом ${item.duration}</div>
+          <div class="removeData" data-index=${i}><img src="shape-copy.png"></div>
+        </div>`).appendTo(list);
   });
 }
 
@@ -98,6 +101,12 @@ $(document).ready(function () {
   
     redraw();
   });
+
+  $(document).on('click', '.removeData', function () {
+    providers[id].onRemove()
+    
+    redraw();
+  })
 
   $(".checkbox").click(function () {
     $(this).toggleClass('checked')

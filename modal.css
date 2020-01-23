@@ -1,0 +1,38 @@
+#my-modal .modal-header, #my-modal .modal-footer{
+  border: none;
+}
+
+#my-modal .modal-content{
+  font-family: Roboto;
+  width: 83%;
+  margin-left: 10%;
+}
+
+#my-modal .modal-body .inputData{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+#my-modal .modal-body .inputData span,#my-modal .modal-body .inputData button {
+  padding: 8px 10px 15px 10px;
+  font-size: 14px;
+}
+
+#my-modal .modal-body .inputData span select,#my-modal .modal-body .inputData button, #my-modal .modal-body .inputData input{
+  width: 150px;
+  border: 1px solid black;
+} 
+
+#my-modal .modal-body .inputData button{
+  margin-top: 50px;
+}
+#my-modal .transportData .notificationValue{
+  margin-top: 40px;
+  padding-top: 10px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f6f7fb;
+}

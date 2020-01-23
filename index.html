@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="notifications_database.css">
   <link rel="stylesheet" href="togglebutton.css">
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="modal.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="main.js"></script>
@@ -113,7 +114,7 @@
       
           <div class="row align-items-center" id="overload-row">
             <div class="col-sm-3"><div><p>перезавантаження системи</p></div></div>
-            <div class="col-sm" id="settings_overload"><button data-action="show-modal" data-modal-id="0">Show 0</button></div>
+            <div class="col-sm" id="settings_overload" data-action="show-modal" data-modal-id="0"><img src="gear.svg"></div>
             <div class="col-sm" style="text-align: center;"><div class="mobile"><div class="checkbox"></div></div></div> 
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -131,7 +132,7 @@
       
           <div class="row align-items-center" id="outtrack_way-row">
             <div class="col-sm-3"><div><p>відхилення від графіка виїзду на маршрут</p></div></div>
-            <div class="col-sm" id="settings_outtrack_way"><button data-action="show-modal" data-modal-id="1">Show 1</button></div>
+            <div class="col-sm" id="settings_outtrack_way" data-action="show-modal" data-modal-id="1"><img src="gear.svg"></div>
             <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -149,7 +150,7 @@
       
           <div class="row align-items-center" id="outtrack_stop-row">
             <div class="col-sm-3"><div><p>відхилення від графіка руху по зупинкам</p></div></div>
-            <div class="col-sm" id="settings_outtrack_stop"><button data-action="show-modal" data-modal-id="2">Show 2</button></div>
+            <div class="col-sm" id="settings_outtrack_stop" data-action="show-modal" data-modal-id="2"><img src="gear.svg"></div>
             <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -200,40 +201,43 @@
     </div>
     
     <div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Параметри системних сповіщень</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
           </div>
           <div class="modal-body">
             <div class="inputData">
-              <span style="display: inline-block;" class="drop">
-                <label for="dropdownData" style="display: block;">транспорт:</label>
-                <select class="dropdownData"></select>
-              </span>
+              <div style="display: inline-block;">
+                <span class="drop">
+                  <label for="dropdownData" style="display: block;">транспорт:</label>
+                  <select class="dropdownData form-control-sm"></select>
+                </span>
+              </div>
 
-              <span style="display: inline-block;" class="drop">
-                <label for="inputText" style="display: block;">к-ть повторювань:</label>
-                <input type="text" class="inputText"></input>
-              </span>
+              <div style="display: inline-block;">
+                <span class="drop">
+                  <label for="inputText" style="display: block;">к-ть повторювань:</label>
+                  <input type="text" class="inputText form-control-sm"></input>
+                </span>
+              </div>
 
-              <span style="display: inline-block;" class="drop">
-                <label for="duration" style="display: block;">протягом:</label>
-                <select class="duration">
-                  <option value="зміни">зміни</option>
-                  <option value="1 години">1 години</option>
-                  <option value="2 годин">2 годин</option>
-                </select>
-              </span>
-
-              <button class="addTransport">Додати транспорт</button>
-
-              <div class="transportData"></div>
+              <div style="display: inline-block;">
+                <span class="drop">
+                  <label for="duration" style="display: block;">протягом:</label>
+                  <select class="duration form-control-sm">
+                    <option value="зміни">зміни</option>
+                    <option value="1 години">1 години</option>
+                    <option value="2 годин">2 годин</option>
+                  </select>
+                </span>
+              </div>
+              <div style="display: inline-block;">
+                <button class="addTransport form-control">Додати транспорт</button>
+              </div>
 
             </div>
+            <div class="transportData"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

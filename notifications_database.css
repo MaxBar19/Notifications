@@ -87,6 +87,10 @@
   border: none;
 }
 
+.notification-table img{
+  cursor: pointer;
+}
+
 /* .notification-table .table { 
   width: calc(100% - 80px);
   height: 100%;
