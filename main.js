@@ -10,13 +10,7 @@ function makeDropdownFromData(data){
 }
 
 function makeListFromData(transport, repeat, duration){
-  $('#transportData').append('<div class="notificationValue"></div>')
-
-  $('.notificationValue').append('<div class="transportValue">' + transport +'</div>')
-  $('.notificationValue').append('<div class="repeatValue">'+ repeat +'</div>')
-  $('.notificationValue').append('<div class="durationValue">' + duration + '</div>')
-  $('.notificationValue').append('<button class="removeData">X</button>')
-
+  $('#transportData').append('<div class="notificationValue"><div>' + transport +'</div><div>'+ repeat +'</div><div>' + duration + '</div></div>')
 }
 
 
@@ -37,7 +31,8 @@ $(document).ready(function () {
     $(this).style("margin-left: 25px;background-color: #44b6f6;");
   })
 
-  $('#addTransport').click(function(){
+  $(document).on('click', '#addTransport',function(event){
+
     let transport = $('#dropdownData').val();
     let repeat = $('#inputText').val();
     let duration = $('#duration').val();
