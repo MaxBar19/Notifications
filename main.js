@@ -45,4 +45,8 @@ $(document).ready(function () {
     makeListFromData(transport, repeat, duration);
   })
 
+  $(document).on('click', '.removeData', function(){
+    $(this).parent().remove();
+  })
+
 });
