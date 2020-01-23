@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="notification_icon.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="notifications_database.css">
-  <link rel="stylesheet" href="sidebar.css">
   <link rel="stylesheet" href="togglebutton.css">
   <link rel="stylesheet" href="main.css">
 
@@ -25,7 +24,7 @@
     
   <div class="wrapper">
     <div class="content">
-    <!--Header-->
+
     <div class="header">
       <div class="logo_select_head-menu">
         <div class="logo">
@@ -114,7 +113,7 @@
       
           <div class="row align-items-center" id="overload-row">
             <div class="col-sm-3"><div><p>перезавантаження системи</p></div></div>
-            <div class="col-sm" id="settings_overload" data-toggle="modal" data-target="#exampleModal"><img src="gear.svg"></div>
+            <div class="col-sm" id="settings_overload"><button data-action="show-modal" data-modal-id="0">Show 0</button></div>
             <div class="col-sm" style="text-align: center;"><div class="mobile"><div class="checkbox"></div></div></div> 
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -132,7 +131,7 @@
       
           <div class="row align-items-center" id="outtrack_way-row">
             <div class="col-sm-3"><div><p>відхилення від графіка виїзду на маршрут</p></div></div>
-            <div class="col-sm" id="settings_outtrack_way"><img src="gear.svg"></div>
+            <div class="col-sm" id="settings_outtrack_way"><button data-action="show-modal" data-modal-id="1">Show 1</button></div>
             <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -150,7 +149,7 @@
       
           <div class="row align-items-center" id="outtrack_stop-row">
             <div class="col-sm-3"><div><p>відхилення від графіка руху по зупинкам</p></div></div>
-            <div class="col-sm" id="settings_outtrack_stop"><img src="gear.svg"></div>
+            <div class="col-sm" id="settings_outtrack_stop"><button data-action="show-modal" data-modal-id="2">Show 2</button></div>
             <div class="col-sm"><div class="mobile"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="email"><div class="checkbox"></div></div></div>
             <div class="col-sm"><div class="sms"><div class="checkbox"></div></div></div>
@@ -183,7 +182,6 @@
               </div>
             </div>
           </div>
-      
         </div>
     
     <div class="Footer">
@@ -201,7 +199,7 @@
     </div>
     </div>
     
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -214,26 +212,26 @@
             <div class="inputData">
               <span style="display: inline-block;" class="drop">
                 <label for="dropdownData" style="display: block;">транспорт:</label>
-                <select id="dropdownData"></select>
+                <select class="dropdownData"></select>
               </span>
 
               <span style="display: inline-block;" class="drop">
                 <label for="inputText" style="display: block;">к-ть повторювань:</label>
-                <input type="text" id="inputText"></input>
+                <input type="text" class="inputText"></input>
               </span>
 
               <span style="display: inline-block;" class="drop">
                 <label for="duration" style="display: block;">протягом:</label>
-                <select id="duration">
+                <select class="duration">
                   <option value="зміни">зміни</option>
                   <option value="1 години">1 години</option>
                   <option value="2 годин">2 годин</option>
                 </select>
               </span>
 
-              <button id="addTransport">Додати транспорт</button>
+              <button class="addTransport">Додати транспорт</button>
 
-              <div id="transportData"></div>
+              <div class="transportData"></div>
 
             </div>
           </div>
