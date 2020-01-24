@@ -103,6 +103,7 @@ $(document).ready(function () {
     providers[id].onAdd()
   
     redraw();
+    $('.inputText').val('');
   });
 
   $(document).on('click', '.removeData', function () {

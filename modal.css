@@ -1,11 +1,14 @@
 #my-modal .modal-header, #my-modal .modal-footer{
   border: none;
 }
-
 #my-modal .modal-content{
   font-family: Roboto;
   width: 83%;
   margin-left: 10%;
+}
+
+#my-modal .modal-body{
+  height: 400px;
 }
 
 #my-modal .modal-body .inputData{
@@ -16,30 +19,63 @@
 
 #my-modal .modal-body .inputData span,#my-modal .modal-body .inputData button {
   padding: 8px 10px 15px 10px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 #my-modal .modal-body .inputData span select,#my-modal .modal-body .inputData button, #my-modal .modal-body .inputData input{
-  width: 150px;
-  border: 1px solid black;
+  width: 135px;
+  border: solid 1px #919fb9;
+  border-radius: 4px;
 } 
 
 #my-modal .modal-body .inputData button{
   margin-top: 50px;
+  border-radius: 4px;
+  background-color: #4f74b0;
+  color: #ffffff;
 }
+
+
 #my-modal .transportData .notificationValue{
-  margin-top: 40px;
-  padding-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
   background-color: #f6f7fb;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-
 #my-modal .transportData .notificationValue .inline span, #my-modal .transportData .notificationValue .inline img{
-
   padding: 5px;
 }
 
+#my-modal .modal-header{
+  padding: 40px;
+}
+
+#my-modal .modal-body{
+  padding: 0 40px 40px 40px;
+}
+
+#my-modal .modal-footer{
+  margin-right: 34px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+#my-modal .modal-footer #close{
+  color: #4f74b0;
+  border-radius: 4px;
+  border: solid 1px #4f74b0;
+  width: 120px;
+  height: 34px;
+}
+
+#my-modal .modal-footer #save{
+  border-radius: 4px;
+  background-color: #f9aa2a;
+  font-size: 16px;
+  color: #293042;
+  width: 120px;
+  height: 34px;
+
+}
